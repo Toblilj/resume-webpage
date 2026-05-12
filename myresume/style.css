@@ -1,0 +1,101 @@
+.top-section{
+   background-image: url("../assets/jagresumee.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+
+}
+.body {
+  line-height: 1.6;
+}
+
+.header-text{
+ text-align: center;
+}
+
+.header-text h1 {
+  font-size: 70px;
+  color: white;
+}
+
+.header-text h2 {
+  font-size: 15px;
+  color: white;
+}
+
+.header-text p {
+  font-size: 16px;
+  color: white;
+}
+
+.navbar {
+ font-size: 60px;
+ display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: rgb(52, 88, 124);
+
+  padding: 20px;
+}
+
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+body {
+  background-color: rgb(48, 74, 102);
+  margin: 0;
+padding: 0;
+}
+
+.card{
+  max-width: 700px;
+}
+.column-middle{
+  text-align:left;
+  font-size: 10px;
+   color: white;
+   flex: 1;
+}
+.column-left h2{
+  font-size:16px;
+   flex: 1;
+}
+
+.column-left {
+  font-size:16px;
+  flex: 1;
+}
+.column-left h2{
+  font-size:16px;
+  flex: 1;
+}
+
+.column-right{
+  
+  font-size: 10px;
+  flex: 1;
+}
+
+.column-right h2{
+ 
+  font-size: 14px;
+  flex: 1;
+}
+
+.content-wrapper{
+  display:flex;
+  gap: 40;
+  
+}
