@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # Personal Portfolio
 
 🚧 **Work in Progress**
@@ -52,4 +49,3 @@ I also want the project to demonstrate how I approach developing something from 
 ## Status
 
 🚧 Work in progress — actively developing.
->>>>>>> 524f1a1 (Added README.md file)
