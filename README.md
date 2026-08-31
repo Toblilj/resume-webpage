@@ -44,6 +44,7 @@ I also want the project to demonstrate how I approach developing something from 
 - [ ] Improve responsive design
 - [ ] Add animations/interactions
 - [ ] Add contact section
+- [ ] Add terminal 
 - [ ] Deploy final version
 
 ## Status

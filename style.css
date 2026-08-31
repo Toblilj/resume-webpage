@@ -157,7 +157,7 @@ border-color: var(--border);
   height: 10px;
 background-color:var(--status-green);
 display: inline-block;
-animation:grndotglow 2s infinite;
+animation:grndotglow 3s infinite;
 }
 
 @keyframes grndotglow{
