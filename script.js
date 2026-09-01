@@ -4,11 +4,25 @@ function infome (command) {
         
         return "Tobias Lilja";
     } 
-    else if (command == "help"){
+     if (command == "help"){
         const helpArr = ["Who am i?" , "ls" , "uptime" , "contact" , "hire" , "clear" ];
-       return "hjälp text här";
+       return helpArr.join("\n");
         
-    } else {
+    } if (command=="ls"){
+        return "Kommer snart";
+    }
+    if (command=="uptime"){
+        return "Kommer snart";
+    }
+    if (command=="contact"){
+        return "Kommer snart";
+    }
+    if (command=="hire"){
+        return "Kommer snart";
+    }
+    if (command=="clear"){
+        return "";
+    }else {
         return "Ogiltigt kommand";
     }
 
@@ -23,7 +37,7 @@ input.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
     const reply = infome(input.value);
 
-    if (reply === "Ogiltigt kommando") {
+    if (reply === "Ogiltigt kommand") {
       alert("wrong input");
     } else {
       output.textContent = reply;
