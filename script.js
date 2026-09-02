@@ -15,7 +15,7 @@ function infome (command) {
         return "Kommer snart";
     }
     if (command=="contact"){
-        return "Kommer snart";
+        return "Email: ";
     }
     if (command=="hire"){
         return "Kommer snart";
