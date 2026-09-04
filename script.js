@@ -1,30 +1,43 @@
 /* Callback functions for terminal--------*/
 function infome (command) {
-    if(command == "who am i?"){
-        
-        return "Tobias Lilja";
-    } 
-     if (command == "help"){
-        const helpArr = ["Who am i?" , "ls" , "uptime" , "contact" , "hire" , "clear" ];
-       return helpArr.join("\n");
-        
-    } if (command=="ls"){
-        return "Kommer snart";
-    }
-    if (command=="uptime"){
-        return "Kommer snart";
-    }
-    if (command=="contact"){
-        return "Email: ";
-    }
-    if (command=="hire"){
-        return "Kommer snart";
-    }
-    if (command=="clear"){
+
+switch (command){
+
+case "Who am i?":
+    return "Tobias lilja";
+    break;
+case "help":
+ const helpArr = ["Who am i?" , "ls" , "uptime" , "contact" , "hire" , "clear" ];
+       
+ return helpArr.join("\n");
+break;
+    case "ls":
+
+    return "Kommer snart";
+    break;
+
+    case "uptiime":
+
+    return "Kommer snart";
+    break;
+    case "contact":
+
+    return "Email: <a href='mailto:tobbel93@hotmail.com'>tobbel93@hotmail.com</a>";
+    break;
+
+    case "hire":
+    return "Kommer snart";
+
+        case "clear":
         return "";
-    }else {
-        return "Ogiltigt kommand";
-    }
+        break;
+            default:
+            return "Ogilitig input";
+            break;
+
+}
+
+
 
 } 
 
@@ -40,7 +53,7 @@ input.addEventListener("keydown", function (event) {
     if (reply === "Ogiltigt kommand") {
       alert("wrong input");
     } else {
-      output.textContent = reply;
+      output.innerHTML = reply;
     }
 
     input.value = "";
