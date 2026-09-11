@@ -30,7 +30,7 @@ body{
 height:100vh;
 overflow:hidden;
 display:grid;
-grid-template-rows:80px 1fr 70px;
+grid-template-rows:80px 1fr 84px;
 }
 .main{
   display:grid;
@@ -370,9 +370,64 @@ margin-bottom:15px;
 
 /* Contact sektion */
 .kontakt {
-display:grid;
-  place-items: center;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
   border: 4px solid var(--border);
-  padding: 16px;
-  
+  padding: 0 24px;
+  overflow:hidden;
+}
+
+.kontakt-label{
+  font-family:'Courier New', Courier, monospace;
+  font-size:0.85em;
+  color:var(--text-muted);
+  white-space:nowrap;
+}
+
+.kontakt-cards{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.kontakt-card{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:6px 14px;
+  border:1px solid var(--border-strong);
+  text-decoration:none;
+  color:var(--text);
+}
+
+.kontakt-card:hover{
+  border-color:var(--accent-dark);
+}
+
+.kontakt-icon{
+  font-family:'Courier New', Courier, monospace;
+  font-size:0.9em;
+  color:var(--accent);
+}
+
+.kontakt-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.2;
+}
+
+.kontakt-title{
+  font-size:0.65em;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  color:var(--text-muted);
+}
+
+.kontakt-value{
+  font-size:0.85em;
+  font-weight:600;
 }
