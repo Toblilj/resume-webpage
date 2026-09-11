@@ -356,6 +356,25 @@ margin-bottom:15px;
   margin-top:auto;
   padding-top:12px;
   border-top:1px solid var(--border-strong);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.prompt{
+  color:var(--accent);
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.typed-command{
+  color:var(--text);
+  font-weight:700;
+}
+
+.hint{
+  color:var(--text-muted);
+  font-style:italic;
 }
 
 .terminal-input-row input{
