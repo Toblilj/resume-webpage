@@ -14,6 +14,7 @@
   --chip-bg: #43444398;
   --accent: #692505;
   --accent-dark: #8a3e1f;
+  --accent-bright: #e0793d;
   --highlight: #647a67;
   --status-green: #0a961c;
 }
@@ -110,6 +111,15 @@ border-color: var(--border);
   margin-left:auto;
 }
 
+.panel-num{
+  border:1px solid var(--accent-dark);
+  color:var(--accent-bright);
+  padding:2px 8px;
+  font-family:'Courier New', Courier, monospace;
+  font-size:0.85em;
+  letter-spacing:0.5px;
+}
+
 /* hero section!*/
 .hero{
     border: 4px solid var(--border);
@@ -137,11 +147,16 @@ border-color: var(--border);
   padding:4px 10px;
   color:var(--text-muted);
   letter-spacing:0.5px;
+  transition: border-color 0.15s ease;
+}
+
+.badge:hover{
+  border-color:var(--accent-dark);
 }
 
 .badge-accent{
   border-color:var(--accent-dark);
-  color:var(--accent);
+  color:var(--accent-bright);
 }
 
 .hero-plus{
@@ -209,11 +224,17 @@ padding: 5px;
 border: 1px solid var(--border-strong);
 font-size: 0.9em;
 font-weight:600;
+transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover{
+  border-color:var(--accent-dark);
+  color:var(--accent-bright);
 }
 
 .chip.primary{
   border-color:var(--accent-dark);
-  color:var(--accent);
+  color:var(--accent-bright);
 }
 
 .chips{
@@ -307,7 +328,7 @@ margin-bottom:15px;
 }
 
 .quote-accent{
-  color:var(--accent-dark);
+  color:var(--accent-bright);
 }
 
 .portrait-stats{
@@ -362,7 +383,7 @@ margin-bottom:15px;
 }
 
 .prompt{
-  color:var(--accent);
+  color:var(--accent-bright);
   font-weight:700;
   white-space:nowrap;
 }
@@ -421,6 +442,7 @@ margin-bottom:15px;
   border:1px solid var(--border-strong);
   text-decoration:none;
   color:var(--text);
+  transition: border-color 0.15s ease;
 }
 
 .kontakt-card:hover{
@@ -430,7 +452,7 @@ margin-bottom:15px;
 .kontakt-icon{
   font-family:'Courier New', Courier, monospace;
   font-size:0.9em;
-  color:var(--accent);
+  color:var(--accent-bright);
 }
 
 .kontakt-text{
@@ -449,4 +471,72 @@ margin-bottom:15px;
 .kontakt-value{
   font-size:0.85em;
   font-weight:600;
+}
+
+/* ============================================
+   Responsiv layout — mobil/tablet
+   Under 900px: sluta tvinga in allt i en fast
+   100vh-yta (omöjligt att få läsbart på en telefon),
+   stapla istället allt i en kolumn och låt sidan
+   scrolla normalt.
+   ============================================ */
+@media (max-width: 900px){
+
+  .root{
+    height:auto;
+    min-height:100vh;
+    overflow:visible;
+    grid-template-rows:auto 1fr auto;
+  }
+
+  .header{
+    grid-template-columns: 1fr;
+    align-items:flex-start;
+    row-gap:6px;
+    padding:12px 0;
+  }
+
+  .left-before,
+  .middle,
+  .right-after{
+    justify-self:stretch;
+    padding:0 16px;
+  }
+
+  .main{
+    grid-template-columns: 1fr;
+    padding:12px;
+  }
+
+  .left-col{
+    grid-template-rows: auto auto;
+  }
+
+  .panel-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  /* Interna scroll-ytor får en begränsad höjd istället för
+     att sträcka sig efter en grid-cell som inte finns längre */
+  .scroll,
+  .timeline,
+  #terminalOutput{
+    max-height:260px;
+  }
+
+  .portrait{
+    min-height:320px;
+  }
+
+  .kontakt{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:16px;
+    gap:12px;
+  }
+
+  .kontakt-cards{
+    justify-content:flex-start;
+  }
 }

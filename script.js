@@ -18,7 +18,7 @@ break;
     break;
 
     case "uptime":
-    return "Servern har varit igång sen jag startade lära mig drifta den — pågående projekt, se 'Homelabb' i erfarenhetslistan.";
+    return "TJÄNST          UPTIME\nvaultwarden     12d 4h\nadguard-home    12d 4h\ncaddy           31d 9h\nportainer       12d 4h\n\n<span class='hint'>→ demo-data, skriv 'help' för fler kommandon</span>";
     break;
     case "contact":
     return "Email: <a href='mailto:tobias@alctim.xyz'>tobias@alctim.xyz</a>";
